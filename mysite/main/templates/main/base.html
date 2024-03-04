@@ -3,12 +3,13 @@
         <title>Costa do Castelo</title>
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav id="navbar" class="navbar">
             <label><a href="">Home</a></label>
-            <label><a href="#carta">Carta</a></label>
+            <label><a href="#topMidPage">Reservations</a></label>
+            <label><a href="#botMidPage">Carta</a></label>
             <label><a href="#local">Location</a></label>
             <label><a href="#about">About</a></label>
             
@@ -18,8 +19,8 @@
             {% endblock %}
         </article>
 
-        <article id="midPage">
-            {% block midPage %}
+        <article id="topMidPage">
+            {% block topMidPage %}
             {% endblock %}
         </article>
 
@@ -38,4 +39,7 @@
             }
         };</script>
     </body>
+    <footer>
+        
+    </footer>
 </html>

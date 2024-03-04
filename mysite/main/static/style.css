@@ -10,18 +10,33 @@
 body{
     color: #FFF;
     margin: 0;
-    font-family: "RobinsonBold";
-    background-color: rgb(255, 240, 213);
-    
+    font-family: "RobinsonMedium";
+    background-color: rgb(255, 248, 237);
+    font-size: 1vw;
 }
 h1{
-    font-size: 80px;
+    font-size: 5vw ;
+    font-family: "RobinsonBold";
+    font-weight: inherit;
+}
+h2{
+    font-size: 3.5vw;
     font-family: inherit;
+    font-weight: inherit;
+    margin: 1%;
+}
+h3{
+    font-size: 2vw;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 1%;
 }
 .topPic{
     position:absolute;
-    top: 2;
-    width: 100%;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99%;
     height: auto;
     z-index: -1;
 }
@@ -29,38 +44,70 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 240px;
+    margin-top: 10vw;
+    padding-bottom: 9%;
 }
-#midPage{
+#topMidPage{
     position: relative;
-    padding-top: 30%;
+    padding-top: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #72a3ad;
 }
+
+/* Navbar styles */
+
 .navbar{    
     height: 7%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
-    font-size: 28px;
-    font-weight: bold;
+    column-gap: 1vw;
+    font-size: 1.4vw;
     position: sticky;
     top: 75;
-    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out, font-size 0.1s ease-in-out;
 }
+
 .navbar a{
+    position: relative;
     text-decoration: none;
     color: inherit;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    transition: 0.3s ease-in-out; /* Adding a smooth transition effect */}
+    transition: 0.3s ease-in-out;
+}
 
 .navbar a:hover{
-    font-size: 32px;
-    color:pink;}
+    font-size: 1.8vw;
+    color: #72a3ad;
+}
+
+nav a::after {
+    content: ''; 
+    display: block;
+    height: 0.1vw;
+    background-color: #72a3ad; 
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: right;
+}
+
+.navbar a:hover::after {
+    width: 100%; 
+    transform: scaleX(1); 
+    transform-origin: left; 
+}
+
+
+.navbar a:not(:hover)::after {
+    width: 100%;
+    background-color: #FFF; 
+    transform: scaleX(0); 
+}
 
 .navbar.sticky{
     height: 7%;
@@ -68,21 +115,23 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
-    font-size: 28px;
+    column-gap: 1vw;
+    font-size: 1.4vw;
     font-weight: bold;
     top: 0;
-    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;;
-    background-color: rgba(129, 129, 129, 0.8);}
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out, font-size 0.1s ease-in-out;
+    background-color: rgba(81, 81, 81, 0.8);
+    z-index: 100;
+}
 
 .navbar.sticky a{
     text-decoration: none;
     color: white;
     text-shadow: 2px 2px 2px black;
-    transition: 0.3s ease-in-out; /* Adding a smooth transition effect */}
+    transition: 0.3s ease-in-out; 
+}
 
 .navbar.sticky a:hover{
-    font-size: 32px;
-    color:pink;}
-
-
+    font-size: 1.8vw;
+    color: #72a3ad;
+}
