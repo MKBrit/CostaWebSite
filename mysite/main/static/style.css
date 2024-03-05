@@ -31,6 +31,8 @@ h3{
     font-weight: inherit;
     margin: 1%;
 }
+
+
 .topPic{
     position:absolute;
     top: 8px;
@@ -40,6 +42,11 @@ h3{
     height: auto;
     z-index: -1;
 }
+
+
+
+/* Page Content */
+
 #topPage{
     display: flex;
     justify-content: center;
@@ -59,6 +66,7 @@ h3{
     color: #72a3ad;
 }
 
+
 /* Navbar styles */
 
 .navbar{    
@@ -73,19 +81,48 @@ h3{
     top: 75;
     transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out, font-size 0.1s ease-in-out;
 }
+    .navbar a{
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        transition: 0.3s ease-in-out;
+    }
+        .navbar a:hover{
+            font-size: 1.6vw;
+            font-family: "RobinsonBold";
+            color: #72a3ad;
+            text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        }
 
-.navbar a{
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    transition: 0.3s ease-in-out;
+.navbar.sticky{
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+    font-size: 1.6vw;
+    top: 0;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out, font-size 0.1s ease-in-out;
+    background-color: rgba(62, 62, 62, 0.9);
+    z-index: 100;
 }
+    .navbar.sticky a{
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        transition: 0.3s ease-in-out; 
+    }
+        .navbar.sticky a:hover{
+            font-size: 1.8vw;
+            font-family: "RobinsonBold";
+            color: #72a3ad;
+            text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        }
 
-.navbar a:hover{
-    font-size: 1.8vw;
-    color: #72a3ad;
-}
+
+
 
 nav a::after {
     content: ''; 
@@ -95,43 +132,13 @@ nav a::after {
     transition: transform 0.3s ease-in-out; 
     transform-origin: right;
 }
-
-.navbar a:hover::after {
-    width: 100%; 
-    transform: scaleX(1); 
-    transform-origin: left; 
-}
-
-
-.navbar a:not(:hover)::after {
-    width: 100%;
-    background-color: #FFF; 
-    transform: scaleX(0); 
-}
-
-.navbar.sticky{
-    height: 7%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 1vw;
-    font-size: 1.4vw;
-    font-weight: bold;
-    top: 0;
-    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out, font-size 0.1s ease-in-out;
-    background-color: rgba(81, 81, 81, 0.8);
-    z-index: 100;
-}
-
-.navbar.sticky a{
-    text-decoration: none;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    transition: 0.3s ease-in-out; 
-}
-
-.navbar.sticky a:hover{
-    font-size: 1.8vw;
-    color: #72a3ad;
-}
+    .navbar a:hover::after {
+        width: 100%; 
+        transform: scaleX(1); 
+        transform-origin: left; 
+    }
+        .navbar a:not(:hover)::after {
+            width: 100%;
+            background-color: #FFF; 
+            transform: scaleX(0); 
+        }
