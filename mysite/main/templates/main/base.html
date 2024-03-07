@@ -4,12 +4,24 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>window.onscroll = function() {
+            var nav = document.getElementById('navbar');
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        
+            if (scrollPosition > 0) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        };</script>
+        
     </head>
     <body>
         <nav id="navbar" class="navbar">
             <label><a href="">Home</a></label>
             <label><a href="#topMidPage">Reservations</a></label>
-            <label><a href="#botMidPage">Carta</a></label>
+            <label><a href="#botMidPage">Perfil</a></label>
             <label><a href="#local">Location</a></label>
             <label><a href="#about">About</a></label>
             
@@ -29,20 +41,10 @@
             {% endblock %}
         </article>
 
-        <article id="about">
+        <article id="botPage">
             {% block botPage %}
             {% endblock %}
         </article>
-        <script>window.onscroll = function() {
-            var nav = document.getElementById('navbar');
-            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        
-            if (scrollPosition > 0) {
-                nav.classList.add('sticky');
-            } else {
-                nav.classList.remove('sticky');
-            }
-        };</script>
     </body>
     <footer>
         
