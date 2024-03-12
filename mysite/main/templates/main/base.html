@@ -10,42 +10,24 @@
             var scrollPosition = window.scrollY || document.documentElement.scrollTop;
         
             if (scrollPosition > 0) {
-                nav.classList.add('sticky');
+                nav.classList.add('fixed');
             } else {
-                nav.classList.remove('sticky');
+                nav.classList.remove('fixed');
             }
         };</script>
         
     </head>
-    <body>
-        <nav id="navbar" class="navbar">
-            <label><a href="">Home</a></label>
-            <label><a href="#topMidPage">Reservations</a></label>
-            <label><a href="#botMidPage">Perfil</a></label>
-            <label><a href="#local">Location</a></label>
-            <label><a href="#about">About</a></label>
-            
-        </nav>
-        <article id="topPage">
-            {% block topPage %}
-            {% endblock %}
-        </article>
+    <body>        
+    {% block topPage %}
+    {% endblock %}
+        
+    {% block midPage %}
+    {% endblock %}
 
-        <article id="topMidPage">
-            {% block topMidPage %}
-            {% endblock %}
-        </article>
-
-        <article id="botMidPage">
-            {% block botMidPage %}
-            {% endblock %}
-        </article>
-
-        <article id="botPage">
-            {% block botPage %}
-            {% endblock %}
-        </article>
+    {% block botPage %}
+    {% endblock %}
     </body>
+    
     <footer>
         <div>
             Horário

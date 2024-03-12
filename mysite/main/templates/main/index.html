@@ -3,38 +3,42 @@
 
 
 {% block topPage %}
-<img class="topPic" src="static/images/picture.jpg" alt="mainPic">
-<h1>Slogan goes here</h1>
+
+<article id="topPage">
+    <nav class="navbar" id="navbar">
+        <label><a href="#">Home</a></label>
+        <label><a href="#topPage">Reservations</a></label>
+        <label><a href="#midPage">Perfil</a></label>
+        <label><a href="#botPage">Location</a></label>
+        <label><a href="#about">About</a></label>    
+    </nav>   
+    <h1>Slogan goes here</h1>
+</article>
 {% endblock %}
 
 
 
-{% block topMidPage %}
-<br>
-<h2>Welcome to Costa do Castelo</h2>
-<br><br>
-<h3 style="padding-left: 10px;">Discover the perfect blend of ambiance and flavor at our trendy bar. </h3>
-<h3>Indulge in expertly crafted cocktails, unwind in a stylish atmosphere, and savor the night </h3>
-<h3>with friends. Elevate your nightlife experience with us 🍸 where every drink is a celebration!</h3>
-<h3>Your Friends are already here!</h3>
-<br><br>
-<hr><br>
-<a id="reserva" href="">Reservar Mesa</a>
-<br><hr id="bottomHr">
-{% endblock %}
-
-
-
-{% block botMidPage %}
-<div>
-    <h1 style="color: red;">This is mid bot page</h1>
-</div>
+{% block midPage %}
+<article id="midPage">
+    <br>
+    <h2>Welcome to Costa do Castelo</h2>
+    <br><br>
+    <h3 style="padding-left: 10px;">Discover the perfect blend of ambiance and flavor at our trendy bar. </h3>
+    <h3>Indulge in expertly crafted cocktails, unwind in a stylish atmosphere, and savor the night </h3>
+    <h3>with friends. Elevate your nightlife experience with us 🍸 where every drink is a celebration!</h3>
+    <h3>Your Friends are already here!</h3>
+    <br><br>
+    <hr><br>
+    <a id="reserva" href="">Reservar Mesa</a>
+    <br><hr id="bottomHr">
+</article>
 {% endblock %}
 
 
 
 {% block botPage %}
-<div>
-    <h1 style="color: red;">This is bot page</h1>
-</div>
+<article id="botPage">
+    <div id="foodBtn">Foods</div>
+    <div id="drinkBtn">Drinks</div>
+</article>
 {% endblock %}
