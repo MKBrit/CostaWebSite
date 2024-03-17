@@ -3,7 +3,6 @@
 
 
 {% block topPage %}
-
 <article id="topPage">
     <nav class="navbar" id="navbar">
         <label><a href="#topPage">Home</a></label>
@@ -37,8 +36,36 @@
 
 
 {% block botPage %}
-<article id="botPage">
-    <div id="foodBtn">Foods</div>
-    <div id="drinkBtn">Drinks</div>
+<article id="botPage">    
+    <div id="foodBtn" onclick="showMenu('foods')">Foods</div>
+    <div id="drinkBtn" onclick="showMenu('drinks')">Drinks</div>
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+        <ul id="drinksMenu">
+            <h3>Drinks Menu</h3>
+            {% for category, products in listaProdutos.items %}
+            <h4>{{ category.name }}</h4>
+            <ul>
+                {% for product in products %}
+                <li>{{ product.name }} - {{ product.price }}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </ul>
+        <ul id="foodsMenu">
+            <h3>Foods Menu</h3>
+            {% for category, products in listaProdutos.items %}
+                <h4>{{ category.name }}</h4>
+                <ul>
+                    {% for product in products %}
+                        <li>{{ product.name }} - {{ product.price }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+        
+        <span class="close">&times;</span>
+        </div>
+    </div>
 </article>
 {% endblock %}
